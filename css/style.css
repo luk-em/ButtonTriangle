@@ -1,0 +1,33 @@
+button {
+    display: block;
+    position: relative;
+    margin: 100px auto;
+    font-size: 40px;
+    line-height: 70px;
+    padding: 0 40px;
+    text-transform: uppercase;
+    overflow: hidden;
+    border: 3px solid black;
+
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20%;
+    border-left: 30px solid rgb(5, 112, 212);
+    border-top: 35px solid transparent;
+    border-bottom: 35px solid transparent;
+    transition: .2s;
+
+}
+
+button:hover {
+    color: rgb(5, 112, 212);
+    border: 3px solid rgb(5, 112, 212);
+}
+
+button:hover::before {
+    left: 0;
+}
